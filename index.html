@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <audio id="clickSound" src="click.mp3"></audio>
+<audio id="winSound" src="win.mp3"></audio>
+<audio id="drawSound" src="draw.mp3"></audio>
+
+  <h1>✨ Neon Tic Tac Toe ✨</h1>
+  <div class="mode-select">
+    <button onclick="startGame('vsPlayer')">2 Player Mode</button>
+    <button onclick="showDifficulty()">1 vs Computer</button>
+  </div>
+  <div class="difficulty-select hidden">
+    <label>Select Difficulty:</label><br>
+    <button onclick="startGame('vsComputer', 'easy')">Easy</button>
+    <button onclick="startGame('vsComputer', 'medium')">Medium</button>
+    <button onclick="startGame('vsComputer', 'hard')">Hard</button>
+  </div>
+  <div id="game-container" class="hidden">
+    <div class="scoreboard">
+      <div><strong>Player X:</strong> <span id="scoreX">0</span></div>
+      <div><strong>Player O:</strong> <span id="scoreO">0</span></div>
+    </div>
+    <div id="game">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <p id="status">Current Player: 0</p>
+  </div>
+  <div id="celebration" class="hidden">🎉 Winner! 🎉</div>
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+  <audio id="drawSound" src="draw.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
